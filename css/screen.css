@@ -346,6 +346,14 @@ header {
   #COMPONENTS
 \*------------------------------------*/
 
+.c-logo{
+    height: 32px;
+}
+
+.c-logo__symbol {
+    height: 100%;
+}
+
 /*------------------------------------*\
   #UTILITIES
 \*------------------------------------*/
@@ -609,6 +617,10 @@ header {
         font-size: 20px;
         line-height: 1.6;
     }   
+
+    .c-logo{
+        height: 40px;
+    }
 }
 
 /* Large devices (landscape tablets, desktops, 992px and up)
