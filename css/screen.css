@@ -342,16 +342,68 @@ header {
     align-content: space-between;
 }
 
+.o-list {
+    list-style: none;
+    padding: 0;
+}
+
+.o-section {
+    display: flow-root
+}
+
+.o-section + .o-section {
+    margin-top: 24px;
+}
+
 /*------------------------------------*\
   #COMPONENTS
 \*------------------------------------*/
 
-.c-logo{
+.c-logo {
     height: 32px;
 }
 
 .c-logo__symbol {
     height: 100%;
+}
+
+.c-nav {
+    font-size: 18px;
+    line-height: 24px;
+    margin-left: -16px;
+}
+
+.c-nav__link {
+    text-decoration: none;
+    font-weight: 400;
+    padding: 8px 0;
+    display: block;
+}
+
+.c-nav__link,
+.c-nav__link:visited,
+.c-nav__link:active {
+    color: #202024;
+}
+
+.c-nav--meta {
+    font-size: 16px;
+}
+
+.c-nav__link-meta,
+.c-nav__link-meta:visited,
+.c-nav__link-meta:active {
+    color: #6c6c75;
+}
+
+.is-selected .c-nav__link,
+.c-nav__link:hover,
+.c-nav__link:focus {
+    color: #5051db;
+}
+
+.c-header__nav {
+    display: none;
 }
 
 /*------------------------------------*\
@@ -591,6 +643,17 @@ header {
     }
 }
 
+/*
+    Utilities: spacing
+    ---
+
+
+*/
+
+.u-pt-clear {
+    padding-top: 0 !important;
+}
+
 /*------------------------------------*\
   #MEDIA
 \*------------------------------------*/
@@ -616,20 +679,60 @@ header {
     html {
         font-size: 20px;
         line-height: 1.6;
-    }   
+    }
 
-    .c-logo{
+    .c-logo {
         height: 40px;
+    }
+
+    .c-nav__list {
+        display: flex;
+    }
+
+    .c-nav__link {
+        padding: 8px 16px;
+    }
+
+    .o-row {
+        padding-left: 48px;
+        padding-right: 48px;
+    }
+
+    .o-row--md {
+        padding-top: 48px;
+        padding-bottom: 24px;
+    }
+
+    .o-row--lg {
+        padding-top: 72px;
+        padding-bottom: 48px;
+    }
+
+    .o-section--lg + .o-section--lg,
+    .o-section--xl + .o-section--xl {
+        margin-top: 48px;
     }
 }
 
-/* Large devices (landscape tablets, desktops, 992px and up)
-@media (min-width: 992px) {}
-*/
+/* Large devices (landscape tablets, desktops, 992px and up)*/
+@media (min-width: 992px) {
+    .c-header {
+        display: flex;
+        justify-content: space-between;
+    }
 
-/* Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) {}
-*/
+    .c-header__nav {
+        display: block;
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {
+    .o-section--xl + .o-section--xl {
+        margin-top: 72px;
+    }
+}
+
 
 /*
     Print styles.
