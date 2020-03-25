@@ -2,6 +2,27 @@
   #FONTS
 \*------------------------------------*/
 
+@font-face {
+    font-family: "HK Grotesk Web";
+    font-weight: 200;
+    src: url("../fonts/hkgrotesk-light-webfont.woff2") format("woff2"),
+        url("../fonts/hkgrotesk-light-webfont.woff") format("woff");
+}
+
+@font-face {
+    font-family: "HK Grotesk Web";
+    font-weight: 400;
+    src: url("../fonts/hkgrotesk-regular-webfont.woff2") format("woff2"),
+        url("../fonts/hkgrotesk-regular-webfont.woff") format("woff");
+}
+
+@font-face {
+    font-family: "HK Grotesk Web";
+    font-weight: 600;
+    src: url("../fonts/hkgrotesk-medium-webfont.woff2") format("woff2"),
+        url("../fonts/hkgrotesk-medium-webfont.woff") format("woff");
+}
+
 /*------------------------------------*\
   #GENERIC
 \*------------------------------------*/
@@ -15,8 +36,8 @@
 html {
     font-size: 16px;
     line-height: 1.5;
-    font-family: Helvetica, arial, sans-serif;
-    color: #111;
+    font-family: "HK Grotesk Web", Helvetica, arial, sans-serif;
+    color: #202024;
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -36,7 +57,7 @@ html {
  */
 
 ::selection {
-    background: #e85e00;
+    background: #5051db;
     color: white;
     text-shadow: none;
 }
@@ -64,18 +85,21 @@ img {
 
 h1 {
     font-size: 36px;
+    font-weight: 200;
     line-height: 48px;
     margin: 0 0 24px;
 }
 
 h2 {
     font-size: 32px;
+    font-weight: 200;
     line-height: 40px;
     margin: 0 0 24px;
 }
 
 h3 {
     font-size: 26px;
+    font-weight: 200;
     line-height: 32px;
     margin: 0 0 24px;
 }
@@ -125,7 +149,7 @@ figcaption {
     font-size: 12px;
     line-height: 16px;
     margin-top: 8px;
-    color: #3C3C42;
+    color: #3c3c42;
 }
 
 hr {
@@ -136,18 +160,22 @@ hr {
 }
 
 a {
-    color: RoyalBlue;
-    transition: all .1s ease-in-out;
+    color: #5051db;
+    transition: all 0.1s ease-in-out;
 }
 
 a:visited,
 a:active {
-    color: BlueViolet;
+    color: #3e3ea8;
 }
 
 a:hover,
 a:focus {
-    color: Crimson;
+    color: #3e3ea8;
+}
+
+header {
+    color: #5051db;
 }
 
 /*------------------------------------*\
@@ -194,7 +222,7 @@ a:focus {
     margin-left: auto;
     margin-right: auto;
     width: 100%;
-    max-width: 90em; /* 90 * 16px = 1440px */
+    max-width: 70.5em; /* 90 * 16px = 1440px */
 }
 
 /*
@@ -212,9 +240,9 @@ a:focus {
     flex-wrap: wrap;
 }
 
-    .o-layout__item {
-        flex-basis: 100%;
-    }
+.o-layout__item {
+    flex-basis: 100%;
+}
 
 /* gutter modifiers, these affect o-layout__item too */
 
@@ -575,9 +603,13 @@ a:focus {
 @media (min-width: 576px) {}
 */
 
-/* Medium devices (tablets, 768px and up)
-@media (min-width: 768px) {}
-*/
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    html {
+        font-size: 20px;
+        line-height: 1.6;
+    }   
+}
 
 /* Large devices (landscape tablets, desktops, 992px and up)
 @media (min-width: 992px) {}
