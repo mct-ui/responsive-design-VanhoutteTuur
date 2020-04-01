@@ -212,6 +212,10 @@ header {
     }
 }
 
+.o-row—neutral-x-light {
+    background-color: #F7F7F7;
+}
+
 /*
     Objects: Container
     ---
@@ -243,6 +247,8 @@ header {
 .o-layout__item {
     flex-basis: 100%;
 }
+
+
 
 /* gutter modifiers, these affect o-layout__item too */
 
@@ -348,7 +354,7 @@ header {
 }
 
 .o-section {
-    display: flow-root
+    display: flow-root;
 }
 
 .o-section + .o-section {
