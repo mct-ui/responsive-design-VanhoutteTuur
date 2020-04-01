@@ -213,7 +213,7 @@ header {
 }
 
 .o-row—neutral-x-light {
-    background-color: #F7F7F7;
+    background-color: #f7f7f7;
 }
 
 /*
@@ -247,8 +247,6 @@ header {
 .o-layout__item {
     flex-basis: 100%;
 }
-
-
 
 /* gutter modifiers, these affect o-layout__item too */
 
@@ -411,6 +409,83 @@ header {
 .c-header__nav {
     display: none;
 }
+
+.c-lead {
+    font-weight: 200;
+}
+
+.c-lead--lg {
+    font-size: 20px;
+    line-height: 32px;
+}
+
+.c-lead--xl {
+    font-size: 26px;
+    line-height: 32px;
+}
+
+.c-lead--xxl {
+    font-size: 32px;
+    line-height: 40px;
+}
+
+.c-lead--xxxl {
+    font-size: 36px;
+    line-height: 48px;
+}
+
+/*
+    Component: CTA link
+    ---
+    Small cta link with custom animation
+*/
+
+.c-link-cta {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    padding: 4px 0;
+    transition: color .175s ease-in;
+}
+
+.c-link-cta,
+.c-link-cta:visited,
+.c-link-cta:active {
+    color: #7373F5;
+}
+
+.c-link-cta::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    width: 100%;
+    background-color: #7373F5;
+
+    transform: scaleX(.5);
+    transform-origin: left;
+    transition-property: transform background-color;
+    transition-duration: .175s;
+    transition-timing-function: ease-in;
+}
+
+.c-link-cta::after {
+}
+
+.c-link-cta:hover {
+    color: #3E3EA8;
+}
+
+.c-link-cta:hover::after {
+    transform: scaleX(1);
+    background-color: #3E3EA8;
+}
+
 
 /*------------------------------------*\
   #UTILITIES
@@ -653,11 +728,28 @@ header {
     Utilities: spacing
     ---
 
-
 */
 
 .u-pt-clear {
     padding-top: 0 !important;
+}
+
+/*
+    Utilities: color
+    ---
+    Utility classes to put specific colors onto elements
+*/
+
+.u-color-primary-light {
+    color: #7373F5 !important;
+}
+
+.u-color-primary-base {
+    color: #5051DB !important;
+}
+
+.u-color-primary-dark {
+    color: #3E3EA8 !important;
 }
 
 /*------------------------------------*\
@@ -718,6 +810,26 @@ header {
     .o-section--xl + .o-section--xl {
         margin-top: 48px;
     }
+
+    .c-lead--lg {
+        font-size: 23px;
+        line-height: 32px;
+    }
+
+    .c-lead--xl {
+        font-size: 32px;
+        line-height: 40px;
+    }
+
+    .c-lead--xxl {
+        font-size: 41px;
+        line-height: 48px;
+    }
+
+    .c-lead--xxxl {
+        font-size: 52px;
+        line-height: 64px;
+    }
 }
 
 /* Large devices (landscape tablets, desktops, 992px and up)*/
@@ -737,8 +849,27 @@ header {
     .o-section--xl + .o-section--xl {
         margin-top: 72px;
     }
-}
 
+    .c-lead--lg {
+        font-size: 26px;
+        line-height: 36px;
+    }
+
+    .c-lead--xl {
+        font-size: 36px;
+        line-height: 48px;
+    }
+
+    .c-lead--xxl {
+        font-size: 52px;
+        line-height: 64px;
+    }
+
+    .c-lead--xxxl {
+        font-size: 66px;
+        line-height: 72px;
+    }
+}
 
 /*
     Print styles.
